@@ -1,0 +1,24 @@
+﻿@page
+@model IndexModel
+@{
+ViewData["Title"] = "Home page";
+}
+
+
+<div class="col-1"></div>
+<div class="col-6 d-flex flex-column my-auto">
+    <h1>Harry Bower</h1>
+    <h3>Thinking Different Since 2001</h3>
+    <p>Go on. Give it a whirl.</p>
+</div>
+<div class="col-5 d-flex align-items-center">
+    <div class="container-ipod mx-auto">
+        <div class="header-section h-100">
+            @await Component.InvokeAsync("IPod")
+        </div>
+    </div>
+</div>
+        
+
+
+    

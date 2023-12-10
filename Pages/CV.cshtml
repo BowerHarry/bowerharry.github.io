@@ -1,0 +1,23 @@
+﻿@page
+@model CVModel
+@{
+ViewData["Title"] = "Home page";
+}
+
+
+<div class="col-1"></div>
+<div class="col-6 d-flex flex-column my-auto">
+    <h1>Harry Bower</h1>
+    <h3>Download my Resume</h3>
+</div>
+<div class="col-5 d-flex align-items-center">
+    <div class="container-ipod mx-auto">
+        <div class="header-section h-100">
+            @await Component.InvokeAsync("IPod")
+        </div>
+    </div>
+</div>
+        
+
+
+    
