@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Harry Bower - Portfolio</title>
+    <!-- Add Bootstrap CSS link here -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+      /* Add custom styles here */
+      .card {
+        border-color: transparent;
+      }
+      html,body {
+        background-color: #f5f5f7;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+
+      .img-container img {
+        position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+        
+        background-color: #f5f5f7;
+ 
+      }
+      
+      .img-container {
+        position: relative;
+        margin-top: -35%;
+        padding-bottom: 178.74%;
+        height: 0;
+        overflow: hidden;
+}
+
+      .ipod {
+        position: relative;
+        height: 100%;
+        border-color: #f5f5f7;
+      }
+
+      .menu {
+        position: absolute;
+        border-bottom-color: transparent;
+        width:100%;
+        height: 35%;
+        padding: 0;
+        margin: 0;
+      }
+
+      .interface {
+        position: absolute;
+        top:20.5%;
+        height: 72%;
+        width: 100%;
+        text-align: center;;
+        margin: 0;
+        padding: 0;
+      }
+
+      .header-section {
+        text-align: center;
+        height: 100%;
+
+      }
+
+
+      .nav a {
+        height:100%;
+        opacity: 0;
+        background-color: transparent;
+        border-color: transparent;
+        padding: 0;
+        margin: 0;
+      }
+
+      .header-section a:hover {
+        opacity: 20%;
+      } 
+      li {
+        height:20.5%;
+        width:77%;
+        padding: 0;
+        margin: 0;
+      }
+
+      .header-section a:focus {
+        opacity: 20%;
+
+      } 
+      *:focus {
+        box-shadow: none !important;
+      }
+
+
+
+      .header-section h1 {
+        font-size: 3em;
+      }
+
+
+      .partition {
+        width: 27%;
+        height: 100%;
+      }
+
+      .select {
+        border-color: transparent;
+        background-color: transparent;
+        width: 23%;
+        height: 100% !important;
+
+      }
+
+
+
+      .row {
+        color: black;
+      }
+
+      .lr {
+        height: 33.3%
+      }
+
+      .container-ipod {
+        height: 30vh;
+        width: 30vh;
+      }
+
+      .scroll-container {
+        position: absolute;
+        top:44%;
+        height: 56%;
+        width:100%;
+        padding-left: 1%;
+
+      }
+
+
+
+    </style>
+  </head>
+
+  <body class="h-100 w-100">
+
+    <div class="row h-100 w-100">
+      <div class="col-1"></div>
+      <div class="col-6 d-flex flex-column my-auto">
+        <h1>Harry Bower</h1>
+        <h3>Thinking Different Since 2001</h3>
+        <p>Go on. Give it a whirl.</p>
+      </div>
+      
+      <!-- Main content -->
+      <div class="col-5 d-flex align-items-center">
+        <div class="container-ipod mx-auto">
+        <!-- Header Section -->
+        <div class="header-section h-100">
+          <div class="card ipod">
+            <div class="img-container">
+            <img src="harrys%20ipod.png" class="card-img img-responsive" alt="...">
+            <div class="card-img-overlay interface">
+              <ul class="menu nav flex-column nav-tabs d-flex align-items-center">
+                <li class="nav-item">
+                  <a class="nav-link active btn btn-primary" href="index.html" id="index" data-bs-toggle="tab" tabindex="0" autofocus></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active btn btn-primary" href="cv.html" data-bs-toggle="tab" id="cv" tabindex="0"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active btn btn-primary" href="experiences.html" id="experiences" data-bs-toggle="tab" tabindex="0"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active btn btn-primary" href="contact.html" id="contact" data-bs-toggle="tab" tabindex="0"></a>
+                </li>
+              </ul>
+
+              <div class="scroll-container mx-auto" id="scroll-container">
+                <div class="lr row mx-auto justify-content-center">
+                  <div class="partition top"></div>
+                </div>
+                <div class="lr mx-auto row justify-content-center" >
+                  <div class="partition left"></div>
+                  <button type="button" class="rounded-circle select align-self-center" tabindex="-1"></button>
+                  <div class="partition right"></div>
+                </div>
+                <div class="lr row mx-auto justify-content-center">
+                  <div class="partition bottom"></div>
+                </div>
+              </div>
+
+</div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and other scripts -->
+    <!-- Make sure to include jQuery and Popper.js before Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        // Set focus on the first tab when the page loads
+        document.querySelector('.nav-link:first-child').focus();
+      });
+
+      let lastFocusedNavItem = null;
+
+      // Add an event listener to each nav-item to track the last focused nav-item
+      document.querySelectorAll('.nav-link').forEach(navItem => {
+        navItem.addEventListener('focus', function() {
+          lastFocusedNavItem = this;
+        });
+      });
+
+      // Add an event listener to the "Select" button
+      document.querySelector('.select').addEventListener('click', function() {
+        // Check if there was a last focused nav-item
+        if (lastFocusedNavItem) {
+          document.getElementById(lastFocusedNavItem.id).click();
+          // Add your logic here to handle the selection
+        } else {
+          console.log('No active list item to select.');
+        }
+      });
+      let startPartition;
+      let currentPartition;
+
+      document.querySelectorAll(".partition").forEach(partition => {
+        partition.addEventListener("mouseover", function () {
+          setCurrentPartition(this);
+
+          if (currentPartition && currentPartition !== startPartition) {
+            const direction = getDirection(startPartition, currentPartition);
+            console.log(direction);
+            setStartPartition(currentPartition);
+          }
+        });
+      });
+
+      document.getElementById("scroll-container").addEventListener("mousemove", function (e) {
+        setCurrentPartition(e.target);
+      });
+
+      function setCurrentPartition(partition) {
+        if (partition !== undefined && partition.classList.contains("partition")) {
+          currentPartition = partition; // Extract the class name (e.g., 'top', 'right', 'bottom', 'left')
+        }
+      }
+
+      function setStartPartition(partition) {
+        startPartition = partition; // Extract the class name (e.g., 'top', 'right', 'bottom', 'left')
+      }
+
+      function getDirection(startPartition, endPartition) {
+        if (!startPartition || !endPartition) {
+          return "unknown";
+        }
+
+        const partitions = ['top', 'right', 'bottom', 'left'];
+        const startIndex = partitions.indexOf(startPartition.className.split(" ")[1]);
+        const endIndex = partitions.indexOf(endPartition.className.split(" ")[1]);
+
+        const clockwise = (endIndex - startIndex + 4) % 4 === 1;
+
+        const navLinks = document.querySelectorAll('.nav-link');
+        const currentIndex = Array.from(navLinks).indexOf(document.activeElement);
+
+        if (clockwise) {
+          const nextIndex = (currentIndex + 1) % navLinks.length;
+          navLinks[nextIndex].focus();
+          return "clockwise";
+        } else {
+          const prevIndex = (currentIndex - 1 + navLinks.length) % navLinks.length;
+          navLinks[prevIndex].focus();
+          return "anticlockwise";
+        }
+      }
+
+      document.querySelectorAll('.nav-item').forEach(navItem => {
+        navItem.addEventListener('mouseenter', function() {
+          // Clear focus from the last focused nav-item
+          if (lastFocusedNavItem) {
+            lastFocusedNavItem.blur();
+          }
+
+          // Set focus on the current nav-item
+          this.focus();
+          lastFocusedNavItem = this;
+        });
+      });
+    </script>
+
+  </body>
+
+</html>
